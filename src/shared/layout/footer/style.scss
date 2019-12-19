@@ -1,0 +1,40 @@
+@import '../../../styles/vars.scss';
+
+.layout-footer {
+  margin-top: 45px;
+  background-color: $color-primary;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 45px;
+
+  .links {
+    div {
+      display: inline-block;
+      box-sizing: border-box;
+      vertical-align: middle;
+
+      a {
+        display: inline-block;
+        color: $color-primary-invert;
+        font-family: 'roboto';
+        font-size: 22px;
+        vertical-align: middle;
+      }
+
+      &:nth-child(even) {
+        height: 15px;
+        border-left: 2px solid $color-primary-invert;
+        margin: 0 10px;
+      }
+    }
+  }
+
+  .social-links {
+    margin-top: 20px;
+
+    a {
+      display: inline-block;
+      margin: 5px;
+    }
+  }
+}

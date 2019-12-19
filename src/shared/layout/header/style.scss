@@ -1,10 +1,13 @@
+@import '../../../styles/vars.scss';
+
 .layout-header {
   height: 70px;
-  background-color: #116ec9;
+  background-color: $color-primary;
   overflow: hidden;
 
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 
   .logo {
     text-align: center;
@@ -17,18 +20,56 @@
     }
   }
 
-  & > div {
-    border: 1px solid green;
-    flex-grow: 1;
-  }
-
-  .menu {
+  .left {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 
     & > div {
       margin-left: 20px;
+    }
+
+    .sandwich-wrapper img {
+      height: 17px;
+    }
+
+    .kids img {
+      height: 25px;
+    }
+  }
+
+  .right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .tools {
+      display: flex;
+      justify-items: center;
+
+      & > div {
+        margin: 10px;
+      }
+    }
+
+    .user {
+      margin-left: 30px;
+      margin-right: 20px;
+
+      .profile {
+        display: flex;
+        align-items: center;
+
+        span {
+          margin-left: 5px;
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 14px;
+          text-align: center;
+          color: #ffffff;
+        }
+      }
     }
   }
 }

@@ -1,18 +1,21 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+
+import Routes from './routes';
 
 import Header from './shared/layout/header';
 import Footer from './shared/layout/footer';
 
 import './styles/global.scss';
 
-function App() {
+export default () => {
   return (
     <>
-      <Header />
-      <div className="App">Running...</div>
-      <Footer />
+      <BrowserRouter>
+        <Header />
+        <Routes />
+        <Footer />
+      </BrowserRouter>
     </>
   );
-}
-
-export default App;
+};
