@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 /* pages */
-import Home from '../pages/home';
+import Home from '../pages/Home';
 
 export default () => {
   return (

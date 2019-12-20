@@ -3,8 +3,8 @@ import { BrowserRouter } from 'react-router-dom';
 
 import Routes from './routes';
 
-import Header from './shared/layout/header';
-import Footer from './shared/layout/footer';
+import Header from './shared/layout/Header';
+import Footer from './shared/layout/Footer';
 
 import './styles/global.scss';
 

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-
+import MoviesList from '../../shared/components/MoviesList';
 import api from '../../services/api';
-
 import './style.scss';
 
 export default props => {
@@ -18,9 +17,9 @@ export default props => {
 
     // mapping api fields
     const data = response.data.ListSectionResult.Sections.map(item => ({
-      Id: item.Id,
-      Name: item.Name,
-      URL: item.URL,
+      id: item.Id,
+      name: item.Name,
+      url: item.URL,
     }));
 
     setSections(data);
@@ -29,9 +28,7 @@ export default props => {
   return (
     <>
       {sections.map(section => (
-        <div>
-          <h2>{section.Name}</h2>
-        </div>
+        <MoviesList key={section.id} {...section} />
       ))}
     </>
   );
